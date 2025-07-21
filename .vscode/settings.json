@@ -10,5 +10,8 @@
             "service": "iris",
             "internalPort": 52773
         }
+    },
+    "objectscript.export": {
+        "folder": "code/iris"
     }
 }
