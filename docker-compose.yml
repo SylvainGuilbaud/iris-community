@@ -1,7 +1,10 @@
 services:
   iris:
     # get the latest version of InterSystems IRIS Community Edition
-    image: $IMAGE_IRIS
+    # image: $IMAGE_IRIS_EM
+    image: $IMAGE_IRIS_CD
+    # image: $IMAGE_IRIS_PREVIEW
+    # image: $IMAGE_IRIS
     container_name: $CONTAINER_IRIS
     hostname: $CONTAINER_IRIS
     # map the host port 1972 to the container port 1000
@@ -11,10 +14,12 @@ services:
     environment:
       - IRIS_USER=$IRIS_USER
       - IRIS_PASSWORD=$IRIS_PASSWORD
-      # add persistent storage:
-      - IRIS_DATA_DIRECTORY=$IRIS_DATA_DIRECTORY
+      - ISC_DATA_DIRECTORY=$IRIS_DATA_DIRECTORY # define the persistent directory for IRIS
+      - TZ=Europe/Paris
+      - ISC_CPF_MERGE_FILE=$ISC_CPF_MERGE_FILE # define the merge file for IRIS setup
     restart: always
     volumes:
       - ./data:/data
-      - ./IRIS:/IRIS
+      - ./code:/code
+      - ./IRIS:$IRIS_DATA_DIRECTORY
   

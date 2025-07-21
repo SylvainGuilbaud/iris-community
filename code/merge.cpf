@@ -1,0 +1,28 @@
+[Startup]
+SystemMode=TEST
+
+[config]
+globals=0,0,8192,0,0,0
+routines=0
+jrnbufs=1024
+
+[Actions]
+
+Execute:Namespace="%SYS",ClassName="Security.Users",MethodName="UnExpireUserPasswords",Arg1="*"
+Execute:Namespace="%SYS",ClassName="%SYSTEM.CSP",MethodName="SetConfig",Arg1="CSPConfigName",Arg2="iris-community"
+Execute:Namespace="USER",ClassName="%SYSTEM.OBJ",MethodName="Import",Arg1="/code",Arg2="ck"
+
+
+# Create Resource for APP_DATA database
+CreateResource:Name=%DB_APP_DATA,Description="APP_DATA database"
+# Create Database APP_DATA
+CreateDatabase:Name=APP_DATA,Directory=/IRIS/mgr/APP_DATA,Resource=%DB_APP_DATA
+
+# Create Resource for APP_CODE database
+CreateResource:Name=%DB_APP_CODE,Description="APP_CODE database"
+# Create Database APP_CODE
+CreateDatabase:Name=APP_CODE,Directory=/IRIS/mgr/APP_CODE,Resource=%DB_APP_CODE
+
+# Create Namespace APP using APP_DATA and APP_CODE databases
+CreateNamespace:Name=APP,Globals=APP_DATA,Routines=APP_CODE,Interop=1
+
