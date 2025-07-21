@@ -10,7 +10,7 @@ jrnbufs=1024
 
 Execute:Namespace="%SYS",ClassName="Security.Users",MethodName="UnExpireUserPasswords",Arg1="*"
 Execute:Namespace="%SYS",ClassName="%SYSTEM.CSP",MethodName="SetConfig",Arg1="CSPConfigName",Arg2="iris-community"
-Execute:Namespace="USER",ClassName="%SYSTEM.OBJ",MethodName="Import",Arg1="/code",Arg2="ck"
+Execute:Namespace="USER",ClassName="%SYSTEM.OBJ",MethodName="Import",Arg1="/code/iris",Arg2="ck"
 
 
 # Create Resource for APP_DATA database

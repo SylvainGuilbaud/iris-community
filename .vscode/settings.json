@@ -5,9 +5,9 @@
         "port": 1080,
         "ns": "USER",
         "username": "_SYSTEM",
-        "password": "aaa",
+        "password": "SYS",
         "docker-compose": {
-            "service": "iris_community",
+            "service": "iris",
             "internalPort": 52773
         }
     }
