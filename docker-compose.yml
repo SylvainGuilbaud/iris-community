@@ -1,0 +1,20 @@
+services:
+  iris:
+    # get the latest version of InterSystems IRIS Community Edition
+    image: $IMAGE_IRIS
+    container_name: $CONTAINER_IRIS
+    hostname: $CONTAINER_IRIS
+    # map the host port 1972 to the container port 1000
+    ports:
+      - $IRIS_MGR_PORT:1972
+      - $IRIS_WEB_PORT:52773
+    environment:
+      - IRIS_USER=$IRIS_USER
+      - IRIS_PASSWORD=$IRIS_PASSWORD
+      # add persistent storage:
+      - IRIS_DATA_DIRECTORY=$IRIS_DATA_DIRECTORY
+    restart: always
+    volumes:
+      - ./data:/data
+      - ./IRIS:/IRIS
+  
