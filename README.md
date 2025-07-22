@@ -16,21 +16,16 @@ The InterSystems IRIS instance on the Community Edition cloud node is subject to
 
 All InterSystems IRIS functionality is included except the following:
 
-[Mirroring](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GHA_failover#GHA_failover_mirror)
-
-[Enterprise Cache Protocol (ECP) and distributed caching](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSCALE_scalability#GSCALE_scalability_oview_horizontal_user)
-
-[Sharding](https://docs.intersystems.com/iris20251/csp/docbook/DocBook.UI.Page.cls?KEY=GSCALE_scalability#GSCALE_scalability_oview_horizontal_data)
-
-[InterSystems API Manager](https://docs.intersystems.com/components/csp/docbook/DocBook.UI.Page.cls?KEY=PAGE_apimgr)
++ [Mirroring](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GHA_failover#GHA_failover_mirror)
++ [Enterprise Cache Protocol (ECP) and distributed caching](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSCALE_scalability#GSCALE_scalability_oview_horizontal_user)
++ [Sharding](https://docs.intersystems.com/iris20251/csp/docbook/DocBook.UI.Page.cls?KEY=GSCALE_scalability#GSCALE_scalability_oview_horizontal_data)
++ [InterSystems API Manager](https://docs.intersystems.com/components/csp/docbook/DocBook.UI.Page.cls?KEY=PAGE_apimgr)
 
 Resource usage is limited to the following:
 
-Total data: 10 GB
-
-Connections: 8
-
-Cores: 20
+* Total data: 10 GB
+* Connections: 8
+* Cores: 20
 
 The license for the instance expires a year after the release date for the instance’s product version.
 
