@@ -37,7 +37,7 @@ When upgrading InterSystems IRIS from Community Edition to another edition, inst
 - Data storage and management
 - Interoperability with various protocols and standards
 - Rapid application development tools
-- Community-driven enhancements and support
+- [Community-driven enhancements and support](https://fr.community.intersystems.com/)
 
 ## Getting Started
 
