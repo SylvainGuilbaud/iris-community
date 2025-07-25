@@ -14,12 +14,12 @@ services:
     environment:
       - IRIS_USER=$IRIS_USER
       - IRIS_PASSWORD=$IRIS_PASSWORD
-      - ISC_DATA_DIRECTORY=$IRIS_DATA_DIRECTORY # define the persistent directory for IRIS
+      - ISC_DATA_DIRECTORY=$ISC_DATA_DIRECTORY # define the persistent directory for IRIS
       - TZ=Europe/Paris
       - ISC_CPF_MERGE_FILE=$ISC_CPF_MERGE_FILE # define the merge file for IRIS setup
     restart: always
     volumes:
       - ./data:/data
       - ./code:/code
-      - ./IRIS:$IRIS_DATA_DIRECTORY
+      - ./IRIS:$ISC_DATA_DIRECTORY
   

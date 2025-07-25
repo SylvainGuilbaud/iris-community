@@ -9,6 +9,8 @@ jrnbufs=1024
 [Actions]
 
 Execute:Namespace="%SYS",ClassName="Security.Users",MethodName="UnExpireUserPasswords",Arg1="*"
+Execute:Namespace="%SYS",ClassName="%SQL.Statement",MethodName="%ExecDirect",Arg1="update security.events set enabled=1"
+
 Execute:Namespace="%SYS",ClassName="%SYSTEM.CSP",MethodName="SetConfig",Arg1="CSPConfigName",Arg2="iris-community"
 Execute:Namespace="USER",ClassName="%SYSTEM.OBJ",MethodName="Import",Arg1="/code/iris",Arg2="ck"
 
